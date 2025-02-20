@@ -1,0 +1,143 @@
+/* General Card Styles */
+.popular-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 350px;
+  background-color: #f5f7fa; /* Light Grey for a clean look */
+  font-family: "Inter", sans-serif;
+}
+
+.popular-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide {
+  height: 280px !important;
+}
+/* .card-body-real {
+  position: relative;
+  text-align: left;
+  padding: 20px; 
+  height: 250px;
+} */
+
+/* Image Styling */
+.popular-card-img {
+  height: 150px;
+  object-fit: fill;
+  padding: 5px;
+  border-radius: 15px;
+  /* border-bottom: 1px solid #dfe4ea; */
+}
+
+/* Title Styling */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2f3542; /* Dark Grey for readability */
+  margin-top: 8px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* Rating and Price Row */
+/* .rating,
+.price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+} */
+
+/* Rating Specific Styling */
+
+.rating {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e90ff;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff4757;
+}
+
+/* Rating Icon Styling */
+.rating-icon {
+  color: #1e90ff;
+  font-size: 1.1rem;
+}
+
+/* Price Specific Styling */
+
+/* Price Icon Styling */
+.price-icon {
+  color: #ff4757;
+  font-size: 1.1rem;
+}
+
+/* Section Styling */
+.card-body-section2 {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Card Body Real */
+.card-body-real {
+  position: relative;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #3742fa !important;
+  z-index: 100 !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 22px !important;
+  border: 1px solid #dfe4ea;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .popular-card {
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .rating,
+  .price {
+    font-size: 0.9rem;
+  }
+
+  .rating-icon,
+  .price-icon {
+    font-size: 1rem;
+  }
+
+  .card-body-section2 {
+    padding: 0 8px;
+  }
+}

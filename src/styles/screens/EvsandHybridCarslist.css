@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+
+.EnvandHybridCarsList-main-classname .section-title {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  font-family: "Diphylleia", serif;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.EnvandHybridCarsList-main-classname {
+  background-color: #666666;
+  background-image: url("/wallpaperflare.com_wallpaper (3).jpg");
+  background-size: 100% 100%;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  /* padding: 20px; */
+}

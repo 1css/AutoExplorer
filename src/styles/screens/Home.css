@@ -1,0 +1,168 @@
+.banner-section {
+  width: 100%;
+  height: 550px;
+}
+
+.home-classname-main .banner-image {
+  height: 100%;
+  width: 100%;
+  position: relative !important;
+  z-index: 1;
+}
+
+.home-classname-main {
+  background-color: #201f31;
+}
+
+.brands-section {
+  /* background: #fff; */
+  padding: 40px 0;
+}
+
+.banner-section {
+  width: 100%;
+  height: 550px;
+  position: relative; /* Ensure this is set */
+}
+
+.vertical-slider-container {
+  position: absolute !important;
+  top: 10%;
+  bottom: 3%;
+  right: 5%;
+  height: 50%;
+  width: 16%; /* Adjust based on the width of the container */
+  background: rgba(255, 255, 255, 0.9);
+  /* background: inherit !important; */
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  z-index: 2;
+  overflow: hidden;
+}
+
+.vertical-slider {
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Let the height expand based on content */
+  animation: slide 31s linear infinite;
+}
+
+.part-card {
+  flex: 0 0 100%;
+  text-align: center;
+  /* background: #fff; */
+  background: transparent;
+  padding: 1rem;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.part-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.part-card h4 {
+  font-size: 1.1rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Extras Section */
+.banner-extras {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: #fff;
+  text-align: left;
+  z-index: 10;
+}
+
+.extra-content p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.explore-btn {
+  padding: 0.5rem 1rem;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.explore-btn:hover {
+  background: #e65c4f;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-image {
+    height: 100%;
+  }
+  .vertical-slider-container {
+    width: 80%;
+    bottom: 0% !important;
+    /* top:0%; */
+    right: 0%;
+    height: 50%;
+  }
+
+  .banner-extras {
+    top: 2% !important;
+  }
+  .part-card h4 {
+    font-size: 1rem;
+  }
+
+  .explore-btn {
+    font-size: 0.8rem;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 1rem;
+  }
+}
+
+/* .vertical-slider .swiper-wrapper {
+  transition-timing-function: linear !important; 
+} */

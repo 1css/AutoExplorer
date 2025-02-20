@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+
+.carlist-container {
+  padding: 10px;
+}
+
+/* General Layout */
+.carlist-container .app-container {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.carlist-container .app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.carlist-container .app-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Brand Menu Button */
+.carlist-container .brand-menu-btn {
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.carlist-container .brand-menu-btn:hover {
+  background-color: #e0a800;
+  transition: background-color 0.3s ease;
+}
+
+/* Offcanvas Menu */
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.offcanvas.show {
+  left: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: #007bff;
+}
+
+/* Car List Main Section */
+.carlist-container .carlist-main {
+  /* padding: 20px; */
+}
+
+.carlist-container .carlist-main h2 {
+  text-align: center;
+
+  margin-bottom: 20px;
+  font-family: "Diphylleia", serif;
+  font-size: 30px;
+}
+
+/* Car Grid */
+.carlist-container .car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.carlist-container .car-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carlist-container .car-card:hover {
+  transform: translateY(-5px);
+}
+
+.carlist-container .car-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.carlist-container .car-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.carlist-container .car-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.carlist-container .car-card p.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .car-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .carlist-container .car-card img {
+    height: 120px;
+  }
+}
+
+.carlist-container .carlist-container {
+  background-color: #666666;
+  padding: 20px;
+}
+
+.spinner-border {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

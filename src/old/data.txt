@@ -1,0 +1,80 @@
+// const cars = [
+//   {
+//     id: 1,
+//     name: "Tesla Model S",
+//     price: "80,000",
+//     image: "https://via.placeholder.com/400x200?text=Tesla+Model+S",
+//   },
+//   {
+//     id: 2,
+//     name: "BMW i8",
+//     price: "120,000",
+//     image: "https://via.placeholder.com/400x200?text=BMW+i8",
+//   },
+//   {
+//     id: 3,
+//     name: "Audi R8",
+//     price: "150,000",
+//     image: "https://via.placeholder.com/400x200?text=Audi+R8",
+//   },
+//   {
+//     id: 4,
+//     name: "Mercedes AMG GT",
+//     price: "160,000",
+//     image: "https://via.placeholder.com/400x200?text=Mercedes+AMG+GT",
+//   },
+//   {
+//     id: 5,
+//     name: "Ford Mustang",
+//     price: "55,000",
+//     image: "https://via.placeholder.com/400x200?text=Ford+Mustang",
+//   },
+//   {
+//     id: 6,
+//     name: "Chevrolet Camaro",
+//     price: "50,000",
+//     image: "https://via.placeholder.com/400x200?text=Chevrolet+Camaro",
+//   },
+//   {
+//     id: 7,
+//     name: "Porsche 911",
+//     price: "170,000",
+//     image: "https://via.placeholder.com/400x200?text=Porsche+911",
+//   },
+//   {
+//     id: 8,
+//     name: "Lamborghini Huracan",
+//     price: "200,000",
+//     image: "https://via.placeholder.com/400x200?text=Lamborghini+Huracan",
+//   },
+//   {
+//     id: 9,
+//     name: "Ferrari F8",
+//     price: "280,000",
+//     image: "https://via.placeholder.com/400x200?text=Ferrari+F8",
+//   },
+//   {
+//     id: 10,
+//     name: "McLaren 720S",
+//     price: "300,000",
+//     image: "https://via.placeholder.com/400x200?text=McLaren+720S",
+//   },
+//   {
+//     id: 11,
+//     name: "Nissan GT-R",
+//     price: "113,000",
+//     image: "https://via.placeholder.com/400x200?text=Nissan+GT-R",
+//   },
+//   {
+//     id: 12,
+//     name: "Jaguar F-Type",
+//     price: "75,000",
+//     image: "https://via.placeholder.com/400x200?text=Jaguar+F-Type",
+//   },
+//   {
+//     id: 13,
+//     name: "Maserati Ghibli",
+//     price: "80,000",
+//     image: "https://via.placeholder.com/400x200?text=Maserati+Ghibli",
+//   },
+// ];

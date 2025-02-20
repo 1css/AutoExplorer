@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs-title {
+  color: blue;
+  font-size: 28px;
+  font-family: "Diphylleia", serif;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:hover {
+  background-color: #555;
+}
+
+.scroll-to-top i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.scroll-to-top i:last-child {
+  font-size: 24px;
+}
+
+/*  */

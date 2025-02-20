@@ -1,0 +1,56 @@
+.featured-classname-main {
+  margin-top: 20px;
+}
+
+.featured-classname-main .nav-tabs {
+  border-bottom: none;
+}
+
+.featured-classname-main .nav-tabs .nav-item {
+  margin-right: 20px;
+}
+
+.featured-classname-main .nav-tabs .nav-link {
+  color: #787777;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 20px;
+}
+
+.featured-classname-main .nav-tabs .nav-link.active {
+  background-color: #333;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.featured-classname-main .tab-content {
+  background-color: #26253a99;
+  /* background-color: #f9f9f9; */
+  /* border: 1px solid #61608099; */
+  /* border-radius: 10px; */
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: none;
+}
+
+.custom-width {
+  max-width: 960px; /* or any other width you want */
+  width: 100%; /* or any other width you want */
+}
+
+/* .swiper-button-prev{
+  left: 0% !important;
+  z-index: 50 !important;
+} */
+
+/* .featured-classname-main .tab-content .popular-cars {
+  max-width: 100%;
+  
+    height: auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */

@@ -1,0 +1,140 @@
+/* Define a color palette */
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #3e8e41;
+  --background-color: #f9f9f9;
+  --border-color: #ddd;
+}
+
+/* Define a consistent unit system */
+:root {
+  --font-size: 16px;
+  --margin: 20px;
+  --padding: 10px;
+}
+
+.review-container {
+  margin: var(--margin) auto;
+  padding: var(--padding);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-form-container {
+  margin-bottom: var(--margin);
+}
+
+.review-form-title {
+  text-align: center;
+  margin-bottom: var(--margin);
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding);
+}
+
+.form-group {
+  margin-bottom: var(--margin);
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--margin);
+}
+
+.form-textarea {
+  width: 100%;
+  height: 100px;
+  padding: var(--padding);
+  margin-bottom: var(--margin);
+  border: 1px solid var(--border-color);
+}
+
+.form-submit {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: var(--padding);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  background-color: var(--secondary-color);
+}
+
+.review-title {
+  text-align: center;
+  margin-bottom: var(--margin);
+}
+
+.review-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--margin);
+}
+
+.review-item {
+  background-color: #fff;
+  padding: var(--padding);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-rating {
+  font-size: var(--font-size);
+  color: #ff9900;
+  margin-bottom: var(--margin);
+}
+
+.review-rating i {
+  margin-right: var(--margin);
+}
+
+.review-content {
+  margin-bottom: var(--margin);
+}
+
+.review-user {
+  font-weight: bold;
+}
+
+.review-login {
+  text-align: center;
+  margin-top: var(--margin);
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+  .review-container {
+    margin: var(--margin) auto;
+    padding: var(--padding);
+  }
+  .review-form-container {
+    margin-bottom: var(--margin);
+  }
+  .review-form {
+    padding: var(--padding);
+  }
+}
+
+@media (max-width: 480px) {
+  .review-container {
+    margin: var(--margin) auto;
+    padding: var(--padding);
+  }
+  .review-form-container {
+    margin-bottom: var(--margin);
+  }
+  .review-form {
+    padding: var(--padding);
+  }
+}

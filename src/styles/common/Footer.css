@@ -1,0 +1,77 @@
+#footer-main-classname {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #232323;
+}
+
+.footer-logo {
+  background: linear-gradient(to top, red, white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#footer-main-classname .footer-input-filed {
+  border-top: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.547);
+  border-left: none;
+  border-right: none;
+  background-color: inherit;
+}
+
+#footer-main-classname .footer-input-filed::placeholder {
+  background-color: inherit;
+  color: white;
+}
+
+#footer-main-classname ul li {
+  padding: 5px;
+}
+
+/* General UL Styling */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  color: white;
+}
+
+/* Headings in the Footer */
+.footer-col2-head {
+  font-size: 21px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Footer Note (e.g., subscription text) */
+.footer-note {
+  color: darkgrey;
+  margin-top: 10px;
+}
+
+/* Footer Input Styling */
+#footer-col1-email {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* Footer Button Styling */
+#footer-btn-col1 {
+  padding: 8px 16px;
+  background: linear-gradient(45deg, rgb(42, 41, 41), green);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Footer Social Icons */
+.footer-icons a {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  color: #007bff;
+}

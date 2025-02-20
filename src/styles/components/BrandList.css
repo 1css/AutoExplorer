@@ -1,0 +1,18 @@
+.brand-list {
+  padding: 10px;
+}
+
+.brand-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.brand-list li {
+  cursor: pointer;
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.brand-list li:hover {
+  background-color: #f0f0f0;
+}

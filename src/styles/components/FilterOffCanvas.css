@@ -1,0 +1,126 @@
+.filter-offcanvas {
+  width: 400px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2623238a;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 400;
+  padding-bottom: 20px;
+}
+
+.filter-offcanvas.show {
+  transform: translateX(0);
+}
+
+.filter-offcanvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.filter-offcanvas-body {
+  padding-top: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 180px);
+}
+
+.filter-offcanvas-footer {
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 400px;
+  width: calc(100vw - 400px);
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.filter-offcanvas .form-check-input {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.filter-offcanvas .form-check-label {
+  font-size: 16px;
+  color: black;
+}
+
+.filter-offcanvas .form-check {
+  margin-bottom: 10px;
+}
+
+.filter-offcanvas .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .filter-offcanvas {
+    width: 100%;
+  }
+  .overlay {
+    left: 0;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-offcanvas {
+    padding: 10px;
+  }
+  .filter-offcanvas .form-check-input {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+  .filter-offcanvas .form-check-label {
+    font-size: 14px;
+  }
+  .filter-offcanvas .btn {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
+
+/* .offcanvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+button {
+  margin: 10px 0;
+} */

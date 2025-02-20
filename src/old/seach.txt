@@ -1,0 +1,92 @@
+ // const [cars, setCars] = useState([
+  //   {
+  //     id: 1,
+  //     name: "Toyota Corolla",
+  //     price: "₹15 Lakh",
+  //     image: "https://via.placeholder.com/150",
+  //     details: "Petrol • Manual • 15 kmpl",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Hyundai Creta",
+  //     price: "₹18 Lakh",
+  //     image: "https://via.placeholder.com/150",
+  //     details: "Diesel • Automatic • 20 kmpl",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Honda City",
+  //     price: "₹12 Lakh",
+  //     image: "https://via.placeholder.com/150",
+  //     details: "Petrol • Automatic • 17 kmpl",
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Maruti Suzuki Swift",
+  //     price: "₹7 Lakh",
+  //     image: "https://via.placeholder.com/150",
+  //     details: "Petrol • Manual • 22 kmpl",
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Kia Seltos",
+  //     price: "₹16 Lakh",
+  //     image: "https://via.placeholder.com/150",
+  //     details: "Diesel • Automatic • 19 kmpl",
+  //   },
+  //   {
+  //     id: 6,
+  //     name: "Tata Nexon",
+  //     price: "₹14 Lakh",
+  //     image: "https://via.placeholder.com/150",
+  //     details: "Electric • Automatic • 312 km range",
+  //   },
+  //   {
+  //     id: 7,
+  //     name: "Mahindra Thar",
+  //     price: "₹14 Lakh",
+  //     image: "https://via.placeholder.com/150",
+  //     details: "Diesel • Manual • 15 kmpl",
+  //   },
+  //   {
+  //     id: 8,
+  //     name: "Ford EcoSport",
+  //     price: "₹11 Lakh",
+  //     image: "https://via.placeholder.com/150",
+  //     details: "Petrol • Automatic • 16 kmpl",
+  //   },
+  //   {
+  //     id: 9,
+  //     name: "Volkswagen Polo",
+  //     price: "₹9 Lakh",
+  //     image: "https://via.placeholder.com/150",
+  //     details: "Petrol • Manual • 18 kmpl",
+  //   },
+  //   {
+  //     id: 10,
+  //     name: "Renault Kwid",
+  //     price: "₹5 Lakh",
+  //     image: "https://via.placeholder.com/150",
+  //     details: "Petrol • Manual • 22 kmpl",
+  //   },
+  // ]);
+
+
+  const primaryFilters = {
+    Budget: ["Upto 2 lakh", "1.00+ Cr"],
+    "Body Type": ["SUV", "Sedan", "Hatchback", "Compact SUV", "Compact Sedan"],
+    "Transmission Type": ["Automatic", "Manual"],
+  };
+
+  const additionalFilters = {
+    "Fuel Type": ["Hybrid", "Petrol", "Diesel", "CNG", "Electric"],
+    "Seating Capacity": ["2", "4", "5", "7+", "9+"],
+    Mileage: ["10 kmpl", "15 kmpl", "20+ kmpl"],
+    "Safety Ratings": ["1 Star", "2 Stars", "3 Stars", "4 Stars", "5 Stars"],
+    Airbags: ["2", "4", "6+", "None"],
+    "Additional Features": ["Sunroof", "Rear Camera", "Touchscreen"],
+    "Engine Capacity": ["1000 cc", "1500 cc", "2000+ cc"],
+    Power: ["50 bhp", "100 bhp", "150+ bhp"],
+    Torque: ["100 Nm", "200 Nm", "300+ Nm"],
+    Colours: ["Red", "Blue", "Black", "White", "Silver", "Grey"],
+  };

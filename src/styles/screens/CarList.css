@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+
+.car-list-container {
+  padding: 20px;
+  background: #666666;
+  text-align: center;
+}
+
+.car-list-container .section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: "Diphylleia", serif;
+}
+
+.car-list-container .car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  /* justify-items: center; */
+}

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+
+.electric-hybrid-cars-section {
+  background-color: #26253a99;
+  /* background-color: #f9f9f9; */
+}
+
+.custom-home-evhy-cardmain {
+  cursor: pointer;
+}
+
+.electric-hybrid-cars-section h2 {
+  font-family: "Diphylleia", serif;
+  font-size: 2rem;
+}
+.home-eveandhyb-img {
+  object-fit: cover;
+  height: 100px !important;
+  padding: 5px;
+  border-radius: 15px;
+}
+.card {
+  border: none;
+  overflow: hidden;
+  height: 100% !important;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  /* font-weight: bold; */
+  color: #333;
+  font-family: "Forum", serif;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* .btn-outline-primary {
+  transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+.cutom-btn-ele {
+  background-color: #e74c3c;
+  border: none;
+}
+
+.cutom-btn-ele:hover {
+  background-color: #e74d3cb8;
+  border: none;
+  text-decoration: underline;
+}
