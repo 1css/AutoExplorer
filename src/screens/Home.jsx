@@ -38,22 +38,28 @@ const Home = React.memo(() => {
   const fetched = async () => {
     setIsLoading(true);
     try {
-      const [firstResponse, secondResponse, thirdResposnse, fouthResponse] =
-        await Promise.all([
-          axios.get(
-            `${import.meta.env.VITE_BACKEND_URL}/api/prod/electric-hybrid-home`
-          ),
-          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/Upprod/active`),
-          axios.get(
-            `${import.meta.env.VITE_BACKEND_URL}/api/brandRouter/topBrand`
-          ),
-          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/prod/seletcars`),
-        ]);
-      setEvhybridhome(firstResponse.data);
-      setPopular(thirdResposnse.data);
-      console.log(firstResponse.data, "firstResponse.data");
+      const responses = await Promise.all([
+        axios.get(
+          `${import.meta.env.VITE_BACKEND_URL}/api/prod/electric-hybrid-home`
+        ),
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/Upprod/active`),
+        axios.get(
+          `${import.meta.env.VITE_BACKEND_URL}/api/brandRouter/topBrand`
+        ),
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/prod/seletcars`),
+      ]);
 
-      setCars(fouthResponse.data);
+      // Check if all responses are successful
+      for (const response of responses) {
+        if (response.status < 200 || response.status >= 300) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+      }
+
+      setEvhybridhome(responses[0].data);
+      setPopular(responses[2].data);
+      console.log(responses[3].data, "fouthResponse.data");
+      setCars(responses[3].data);
     } catch (error) {
       setError(error);
       console.log(error, "error homepage");
