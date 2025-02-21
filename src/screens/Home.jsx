@@ -35,8 +35,11 @@ const Home = React.memo(() => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [cars, setCars] = useState([]);
+  const [hasFetched, setHasFetched] = useState(false); // New state to track if fetched has been called
 
   const fetched = async () => {
+    if (hasFetched) return; // Prevent multiple fetches
+
     setIsLoading(true);
     try {
       const responses = await Promise.all([
@@ -61,6 +64,7 @@ const Home = React.memo(() => {
       setPopular(responses[2].data);
       console.log(responses[3].data, "fourthResponse.data");
       setCars(responses[3].data);
+      setHasFetched(true); // Mark as fetched
     } catch (error) {
       setError(error.message);
       console.log(error, "error homepage");
@@ -72,8 +76,10 @@ const Home = React.memo(() => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetched();
-  }, []);
+    if (!hasFetched) {
+      fetched();
+    }
+  }, [hasFetched]);
 
   console.log("Home component rendered");
 
@@ -82,11 +88,11 @@ const Home = React.memo(() => {
   }
 
   if (error) {
-  // Show alert first
     console.log(error, "errorjjj");
-    
-    return <p className="text-center my-5">Please come back later</p>; // Return JSX properly
+    return <p className="text-center my-5">Please come back later</p>;
   }
+
+  
 
   return (
     <>
