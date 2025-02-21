@@ -41,6 +41,10 @@ const CarsPage = () => {
     []
   );
 
+ 
+
+  const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
   const handleSearch = useCallback(
     async (searchQuery) => {
       try {
@@ -48,12 +52,9 @@ const CarsPage = () => {
         for (const filterName in selectedFilters) {
           params[filterName] = selectedFilters[filterName];
         }
-        const response = await axios.get(
-          `http://localhost:5000/api/carlisttwo`,
-          {
-            params,
-          }
-        );
+        const response = await axios.get(`${BASE_URL}api/carlisttwo`, {
+          params,
+        });
         setCars(response.data);
         console.log(response, "response2");
       } catch (error) {
@@ -147,7 +148,7 @@ const CarsPage = () => {
         arrayFormat: "repeat",
       });
       const response = await axios.get(
-        `http://localhost:5000/api/carlisttwo?${queryString}`
+        `http://localhost:5000api/carlisttwo?${queryString}`
       );
       setCars(response.data);
       setFilteredCars(response.data); // Update filteredCars state directly

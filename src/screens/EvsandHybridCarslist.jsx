@@ -8,13 +8,13 @@ const EnvandHybridCarsList = () => {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
   useEffect(() => {
     const fetchCars = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/prod/electric-hybrid"
-        ); // Adjust the endpoint if needed
+          `${BASE_URL}api/prod/electric-hybrid`
+        );
         setCars(data);
         setLoading(false);
       } catch (err) {

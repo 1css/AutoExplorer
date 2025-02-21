@@ -1,9 +1,9 @@
 import axios from "axios";
 
-// cars.js
-const fetchBrands = async () => {
-  const response = await axios.get("http://localhost:5000/api/prod/getBrands");
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
+const fetchBrands = async () => {
+  const response = await axios.get(`${BASE_URL}api/prod/getBrands`);
   return response.data;
 };
 
@@ -12,7 +12,7 @@ const fetchCars = async (brand = "all", pageNumber = 1) => {
     brand,
     page: pageNumber,
   };
-  const response = await axios.get("http://localhost:5000/api/prod/getCars", {
+  const response = await axios.get(`${BASE_URL}api/prod/getCars`, {
     params,
   });
   console.log(response.data, "response.data");

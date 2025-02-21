@@ -47,7 +47,7 @@ const CarComparison = () => {
 
   const fetchCarDetails = async (selectedCarIds) => {
     try {
-      const url = `${import.meta.env.VITE_BACKEND_URL}/api/cars/details`;
+      const url = `${import.meta.env.VITE_BACKEND_URL}api/cars/details`;
       const params = { ids: selectedCarIds.join(",") };
       const response = await axios.get(url, { params });
       setCarDetails(response.data);

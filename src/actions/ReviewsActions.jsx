@@ -23,7 +23,7 @@ export const postReview = (carId, review) => async (dispatch) => {
     const token = localStorage.getItem("token");
     const config = {
       method: "post",
-      url: `${baseURL}/api/reviews/${carId}`,
+      url: `${baseURL}api/reviews/${carId}`,
       headers: {
         "Content-Type": "application/json",
         Authorization: token ? `Bearer ${token}` : "",
@@ -47,7 +47,7 @@ export const getReviews = (carId) => async (dispatch) => {
     const token = localStorage.getItem("token");
     const config = {
       method: "get",
-      url: `${baseURL}/api/reviews/${carId}`,
+      url: `${baseURL}api/reviews/${carId}`,
       headers: {
         "Content-Type": "application/json",
         Authorization: token ? `Bearer ${token}` : "",

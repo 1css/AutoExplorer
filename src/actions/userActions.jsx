@@ -12,6 +12,8 @@ import {
 } from "../Constants/UserConstants";
 import instance from "../axios/axiosInstance";
 
+const baseURL = import.meta.env.VITE_BACKEND_URL;
+
 export const login = (email, password) => async (dispatch) => {
   dispatch({
     type: LOGIN_REQUEST,
@@ -43,7 +45,8 @@ export const signUpAction = (userData) => {
         type: "SIGN_UP_REQUEST",
       });
       const response = await axios.post(
-        "http://localhost:5000/api/sign",
+        
+        `${baseURL}api/sign`,
         userData
       );
       dispatch({

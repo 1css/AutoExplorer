@@ -78,7 +78,7 @@ const CarsPagesearched2 = () => {
   const fetchCars = async (query) => {
     setLoading(true);
     try {
-      const response = await api2.get("/api/search", { params: { s: query } });
+      const response = await api2.get("api/search", { params: { s: query } });
       setCars(response.data);
       setFilteredCars(response.data);
     } catch (error) {
@@ -100,7 +100,7 @@ const CarsPagesearched2 = () => {
         }
       }
       queryParams.set("s", searchQuery);
-      const response = await api2.get(`/api/filter?${queryParams.toString()}`);
+      const response = await api2.get(`api/filter?${queryParams.toString()}`);
       setFilteredCars(response.data);
     } catch (error) {
       console.error("Failed to fetch filtered cars:", error);

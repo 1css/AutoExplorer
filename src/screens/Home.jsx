@@ -41,13 +41,13 @@ const Home = React.memo(() => {
       const [firstResponse, secondResponse, thirdResposnse, fouthResponse] =
         await Promise.all([
           axios.get(
-            `${import.meta.env.VITE_BACKEND_URL}/api/prod/electric-hybrid-home`
+            `${import.meta.env.VITE_BACKEND_URL}api/prod/electric-hybrid-home`
           ),
-          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/Upprod/active`),
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}api/Upprod/active`),
           axios.get(
-            `${import.meta.env.VITE_BACKEND_URL}/api/brandRouter/topBrand`
+            `${import.meta.env.VITE_BACKEND_URL}api/brandRouter/topBrand`
           ),
-          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/prod/seletcars`),
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}api/prod/seletcars`),
         ]);
       setEvhybridhome(firstResponse.data);
       setPopular(thirdResposnse.data);
