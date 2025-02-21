@@ -61,7 +61,7 @@ const Home = React.memo(() => {
       console.log(responses[3].data, "fouthResponse.data");
       setCars(responses[3].data);
     } catch (error) {
-      setError(error);
+      setError(error.message);
       console.log(error, "error homepage");
     } finally {
       setIsLoading(false);
@@ -80,8 +80,12 @@ const Home = React.memo(() => {
   }
 
   if (error) {
-    return <p className="text-center my-5">Please come back later</p>;
+    alert(error); // Show alert first
+    console.log(error, "error" hih);
+    
+    return <p className="text-center my-5">Please come back later</p>; // Return JSX properly
   }
+
   return (
     <>
       <div className="home-classname-main">
