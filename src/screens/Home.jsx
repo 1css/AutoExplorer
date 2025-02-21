@@ -29,6 +29,7 @@ const Home = React.memo(() => {
       dispatch(fetchTrendingCars());
     }
   }, [dispatch, upcom]);
+
   const [evhybridhome, setEvhybridhome] = useState([]);
   const [Popular, setPopular] = useState([]);
   const [error, setError] = useState(null);
@@ -58,7 +59,7 @@ const Home = React.memo(() => {
 
       setEvhybridhome(responses[0].data);
       setPopular(responses[2].data);
-      console.log(responses[3].data, "fouthResponse.data");
+      console.log(responses[3].data, "fourthResponse.data");
       setCars(responses[3].data);
     } catch (error) {
       setError(error.message);
@@ -67,6 +68,7 @@ const Home = React.memo(() => {
       setIsLoading(false);
     }
   };
+
   const navigate = useNavigate();
 
   useEffect(() => {
