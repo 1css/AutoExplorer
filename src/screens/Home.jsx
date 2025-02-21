@@ -87,11 +87,24 @@ const Home = React.memo(() => {
     return <p>Loading...</p>;
   }
 
+   useEffect(() => {
+     // Reset error state when the component mounts or when the user navigates away
+     return () => {
+       setError(null);
+     };
+   }, []);
+   
   if (error) {
     console.log(error, "errorjjj");
     return <p className="text-center my-5">Please come back later</p>;
   }
 
+  useEffect(() => {
+    // Reset error state when the component mounts or when the user navigates away
+    return () => {
+      setError(null);
+    };
+  }, []);
   
 
   return (
