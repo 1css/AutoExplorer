@@ -85,7 +85,7 @@ const CarDetailsPage = () => {
     const fetchCarData = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_BACKEND_URL}api/prod/getCardetails/${carId}`
+          `${import.meta.env.VITE_BACKEND_URL}/api/prod/getCardetails/${carId}`
         );
 
         const fetchedData = response.data.data;
@@ -137,7 +137,7 @@ const CarDetailsPage = () => {
           priceUnit: fetchedData.priceUnit || "",
         };
         const reviewsResponse = await axios.get(
-          `${import.meta.env.VITE_BACKEND_URL}api/reviews/${carId}`
+          `${import.meta.env.VITE_BACKEND_URL}/api/reviews/${carId}`
         );
         mappedData.reviews = reviewsResponse.data || "";
         setCar(mappedData);

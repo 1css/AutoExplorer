@@ -52,7 +52,7 @@ const CarsPage = () => {
         for (const filterName in selectedFilters) {
           params[filterName] = selectedFilters[filterName];
         }
-        const response = await axios.get(`${BASE_URL}api/carlisttwo`, {
+        const response = await axios.get(`${BASE_URL}/api/carlisttwo`, {
           params,
         });
         setCars(response.data);

@@ -13,7 +13,7 @@ const BASE_URL = import.meta.env.VITE_BACKEND_URL;
     const fetchCars = async () => {
       try {
         const { data } = await axios.get(
-          `${BASE_URL}api/prod/electric-hybrid`
+          `${BASE_URL}/api/prod/electric-hybrid`
         );
         setCars(data);
         setLoading(false);
