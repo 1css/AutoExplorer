@@ -80,8 +80,8 @@ const Home = React.memo(() => {
   }
 
   if (error) {
-    alert(error); // Show alert first
-    console.log(error, "error" hih);
+  // Show alert first
+    console.log(error, "errorjjj");
     
     return <p className="text-center my-5">Please come back later</p>; // Return JSX properly
   }
