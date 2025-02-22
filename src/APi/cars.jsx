@@ -12,7 +12,7 @@ const fetchCars = async (brand = "all", pageNumber = 1) => {
     brand,
     page: pageNumber,
   };
-  const response = await axios.get(`${BASE_URL}//prod/getCars`, {
+  const response = await axios.get(`${BASE_URL}/prod/getCars`, {
     params,
   });
   console.log(response.data, "response.data");

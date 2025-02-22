@@ -15,6 +15,8 @@ const CarList = () => {
       const response = await axios.get(`${BASE_URL}/api/prod/newcars-client`);
       setCars(response.data);
     } catch (err) {
+      console.log(err, "CarList");
+      
       setError("Failed to load cars. Please try again.");
     } finally {
       setLoading(false);
