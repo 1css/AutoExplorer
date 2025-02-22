@@ -6,7 +6,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/components/popular2.css";
 
 function UpcomingCard({ image, title, price, rating }) {
-   const backendUrl = process.env.VITE_BACKEND_URL;
+   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const handleImageError = (e) => {
     e.target.src = "/default-image.png";
   };
