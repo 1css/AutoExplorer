@@ -9,7 +9,7 @@ import {
 } from "../Constants/FeaturedContstant";
 
 const instance = axios.create({
-  baseURL: `${import.meta.env.VITE_BACKEND_URL}api`,
+  baseURL: `${import.meta.env.VITE_BACKEND_URL}/api`,
 });
 
 console.log(instance.defaults.baseURL,'url xios');
