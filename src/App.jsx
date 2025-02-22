@@ -1,24 +1,27 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, lazy, Suspense } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import Header from "./components/common/Header";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./screens/Home";
-import Footer from "./components/common/Footer";
-import CarDetailsPage from "./screens/CarDetailsPage";
-import CarComparison from "./screens/CarComparison";
-import CarList from "./screens/NewCarList";
-import EnvandHybridCarsList from "./screens/EvsandHybridCarslist";
-import AllCarList from "./screens/AllCarList";
-import CartPage from "./screens/CartPage";
-import ProfilePage from "./screens/ProfilePage";
-import CarsPageSearched from "./screens/CarsPageSearched";
-import Login from "./screens/Login";
-import SignUp from "./screens/SignUp";
 
-import LazyLoad from "react-lazy-load";
-import CarsPagesearched2 from "./screens/CarsPagesearched2";
+// Importing Header & Footer
+import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
+
+// Lazy Load Screens
+const Home = lazy(() => import("./screens/Home"));
+const CarDetailsPage = lazy(() => import("./screens/CarDetailsPage"));
+const CarComparison = lazy(() => import("./screens/CarComparison"));
+const CarList = lazy(() => import("./screens/NewCarList"));
+const EnvandHybridCarsList = lazy(() =>
+  import("./screens/EvsandHybridCarslist")
+);
+const AllCarList = lazy(() => import("./screens/AllCarList"));
+const CartPage = lazy(() => import("./screens/CartPage"));
+const ProfilePage = lazy(() => import("./screens/ProfilePage"));
+const CarsPagesearched2 = lazy(() => import("./screens/CarsPagesearched2"));
+const Login = lazy(() => import("./screens/Login"));
+const SignUp = lazy(() => import("./screens/SignUp"));
 
 const ScrollToTopButton = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
