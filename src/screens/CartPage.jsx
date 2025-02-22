@@ -8,7 +8,7 @@ const CartPage = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.favorites);
 
-  console.log(cartItems, "cartItems");
+
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item.carId, item.carName, item.fuelType));
@@ -22,7 +22,7 @@ const CartPage = () => {
     dispatch(clearCart());
   };
 
-  console.log(cartItems, "cartItems");
+
 
   return (
     <div className="cart-container">

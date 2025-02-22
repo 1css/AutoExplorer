@@ -12,7 +12,7 @@ const instance = axios.create({
   baseURL: `${import.meta.env.VITE_BACKEND_URL}/api`,
 });
 
-console.log(instance.defaults.baseURL,'url xios');
+
 
 export const fetchUpcomingCars = () => async (dispatch) => {
   dispatch({
@@ -43,7 +43,6 @@ export const fetchTrendingCars = () => async (dispatch) => {
       payload: response.data,
     });
 
-    console.log(response.data, "response");
     
   } catch (error) {
     dispatch({

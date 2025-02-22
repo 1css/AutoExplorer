@@ -117,7 +117,7 @@ const CarsPagesearched2 = () => {
   }, [searchQuery]);
 
   const handleImageError = (e) => {
-    console.log("Image failed to load, using fallback image.");
+  
     e.target.src = "/default-image.png"; // Ensure this path is correct
   };
 
@@ -129,7 +129,7 @@ const CarsPagesearched2 = () => {
       console.error("Error navigating to new page:", error);
     }
   };
-
+ const backendUrl = process.env.VITE_BACKEND_URL;
   return (
     <div className="container mt-4" style={{ overflowY: "auto" }}>
       {/* Search Bar */}
@@ -178,7 +178,8 @@ const CarsPagesearched2 = () => {
                 }}
               >
                 <img
-                  src={`http://localhost:5000/uploads/cars/${car.firstImage}`}
+                
+                  src={`${backendUrl}/uploads/cars/${car.firstImage}`}
                   className="card-img-top"
                   // alt={car.name}
                   style={{ height: "150px", objectFit: "cover" }}

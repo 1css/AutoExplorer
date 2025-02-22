@@ -92,8 +92,7 @@ const Home = React.memo(() => {
     };
   }, []);
 
-  console.log(Popular, "Popular");
-  console.log(evhybridhome, "evhybridhome");
+
   
   
 
@@ -106,7 +105,7 @@ const Home = React.memo(() => {
     return <p className="text-center my-5">Please come back later</p>;
   }
 
-  console.log("Home component rendered");
+
 
   return (
     <>

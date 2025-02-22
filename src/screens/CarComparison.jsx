@@ -125,7 +125,7 @@ const CarComparison = () => {
     } else if (typeof value === "object") {
       return value ? "Yes2" : "No2";
     } else {
-      console.log(value, "value3");
+   
       return value;
     }
   };
@@ -134,8 +134,8 @@ const CarComparison = () => {
     e.target.src = "/default-image.png";
   };
 
-  console.log(carDetails, "carDetails");
 
+ const backendUrl = process.env.VITE_BACKEND_URL;
   return (
     <div className="car-comparison-container">
       <h2 style={{ fontSize: 28, color: "#333", marginBottom: 20 }}>
@@ -170,7 +170,8 @@ const CarComparison = () => {
                 >
                   <h3 style={{ fontSize: 18, marginBottom: 10 }}>{car.name}</h3>
                   <img
-                    src={car.images[0]}
+                 
+                    src={`${backendUrl}/uploads/cars/${car.images[0]}`}
                     alt={car.name}
                     style={{ width: 100, height: 100, objectFit: "cover" }}
                     onError={handleImageError}

@@ -150,18 +150,16 @@ const CarDetailsPage = () => {
       }
     };
 
-    console.log("fetchCarData function defined");
+  
     fetchCarData();
-    console.log("fetchCarData function called");
+  
   }, [carId]);
 
   const handleLoginClick = () => {
     setIsLoggedIn(true);
   };
 
-  useEffect(() => {
-    console.log(car2, "car2");
-  }, [car2]);
+ 
 
   useEffect(() => {
     // This effect is not doing anything useful, consider removing it
@@ -201,8 +199,7 @@ const CarDetailsPage = () => {
   const navigate = useNavigate();
   const submitHandlerdetails = (e) => {
     // e.preventDefault();
-    console.log("Submit handler called");
-    console.log("Default behavior prevented");
+
     if (rating === 0 || comment.length < 10) {
       alert(
         "Please select a rating and write a review with at least 10 characters"
@@ -229,6 +226,8 @@ const CarDetailsPage = () => {
     };
   };
 
+   const backendUrl = process.env.VITE_BACKEND_URL;
+
   return (
     <div className="container car-details-page mt-4">
       {/* Car Images */}
@@ -237,7 +236,8 @@ const CarDetailsPage = () => {
           {car2.images.map((img, idx) => (
             <Carousel.Item key={idx}>
               <img
-                src={`http://localhost:5000/uploads/cars/${img}`}
+              
+                src={`${backendUrl}/uploads/cars/${img}`}
                 alt={`Car image ${idx + 1}`}
                 onError={handleImageError}
                 crossOrigin="anonymous"

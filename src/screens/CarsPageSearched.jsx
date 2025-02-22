@@ -56,7 +56,7 @@ const CarsPage = () => {
           params,
         });
         setCars(response.data);
-        console.log(response, "response2");
+       
       } catch (error) {
         console.error(error);
       }

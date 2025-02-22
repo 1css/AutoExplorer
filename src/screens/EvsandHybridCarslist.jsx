@@ -32,7 +32,7 @@ const BASE_URL = import.meta.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
 
   const handleClick = (carId) => {
-    console.log(carId, "carId");
+  
     try {
       navigate(`/CarDetailsPage/${carId}`);
     } catch (error) {

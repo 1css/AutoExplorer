@@ -13,7 +13,7 @@ function Trending({}) {
   const trendingcars = useSelector((state) => state.trendingcars);
   const { trending, loading } = trendingcars || {};
 
-  console.log(trending, "trending");
+
   
   return (
     <div>

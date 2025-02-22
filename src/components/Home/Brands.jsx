@@ -4,6 +4,7 @@ import "../../styles/components/Brands.css";
 import { carBrands } from "../../Data/data";
 
 const PopularCarBrands = ({ Popular }) => {
+   const backendUrl = process.env.VITE_BACKEND_URL;
   if (!Popular || Popular.length === 0) return null; // Handle empty state
 
   const topBrand = Popular.topBrand;
@@ -21,7 +22,7 @@ const PopularCarBrands = ({ Popular }) => {
           <div key={topBrand._id} className="brand-card top-brand-card">
             <span className="top-brand-badge">Top Brand</span>
             <img
-              src={`http://localhost:5000/uploads/brands/${topBrand.logo}`}
+              src={`${backendUrl}/uploads/brands/${topBrand.logo}`}
               alt={topBrand.name}
               className="brand-logo"
               onError={handleImageError}
@@ -43,7 +44,7 @@ const PopularCarBrands = ({ Popular }) => {
             transition={{ duration: 0.5 }}
           >
             <img
-              src={`http://localhost:5000/uploads/brands/${brand.logo}`}
+              src={`${backendUrl}/uploads/brands/${brand.logo}`}
               alt={brand.name}
               className="brand-logo"
               onError={handleImageError}

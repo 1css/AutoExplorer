@@ -6,7 +6,7 @@ const CarCard = ({ car }) => {
   const navigate = useNavigate();
 
   const handleClick = (carId) => {
-    console.log(carId, "carId");
+
     navigate(`/CarDetailsPage/${carId}`);
   };
 
@@ -14,6 +14,8 @@ const CarCard = ({ car }) => {
     e.target.src = "/default-image.png";
   };
 
+
+   const backendUrl = process.env.VITE_BACKEND_URL;
   return (
     <div
       className="car-card newcarclassname"
@@ -21,7 +23,8 @@ const CarCard = ({ car }) => {
     >
       <div className="image-container">
         <img
-          src={`http://localhost:5000/uploads/cars/${car.image}`}
+        
+          src={`${backendUrl}/uploads/cars/${car.image}`}
           alt={car.name}
           className="car-image"
           onError={handleImageError}

@@ -4,7 +4,7 @@ import "../../styles/components/ElectricHybridCarsSection.css";
 import { useNavigate } from "react-router-dom";
 
 const ElectricHybridCarsSection = ({ evhybridhome }) => {
- console.log(evhybridhome, "evhybridhomesds");
+ const backendUrl = process.env.VITE_BACKEND_URL;
  
   const handleImageError = (e) => {
     e.target.src = "/default-image.png";
@@ -32,7 +32,8 @@ const ElectricHybridCarsSection = ({ evhybridhome }) => {
             >
               <Card.Img
                 variant="top"
-                src={`http://localhost:5000/uploads/cars/${car.image}`}
+               
+                src={`${backendUrl}/uploads/cars/${car.image}`}
                 onError={handleImageError}
                 crossOrigin="anonymous"
                 className="home-eveandhyb-img"

@@ -13,7 +13,7 @@ function CompareSelections({ cars }) {
   const closeModal = () => setIsModalOpen(false);
   const navigate = useNavigate();
   const [currentCarIndex, setCurrentCarIndex] = useState(null);
-  console.log(cars, "cars");
+
 
   const handleCarSelect = (index) => {
     setCurrentCarIndex(index);

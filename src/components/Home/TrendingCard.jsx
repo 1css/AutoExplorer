@@ -6,6 +6,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/components/popular2.css";
 
 function TrendingCard({ image, title, price, rating, priceunit }) {
+   const backendUrl = process.env.VITE_BACKEND_URL;
   const handleImageError = (e) => {
     e.target.src = "/default-image.png";
   };
@@ -13,7 +14,7 @@ function TrendingCard({ image, title, price, rating, priceunit }) {
     <Card className="popular-card">
       <Card.Img
         variant="top"
-        src={`http://localhost:5000/uploads/cars/${image}`}
+        src={`${backendUrl}/uploads/cars/${image}`}
         alt={title}
         className="popular-card-img"
         onError={handleImageError}

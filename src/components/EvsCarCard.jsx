@@ -6,18 +6,19 @@ const CarCard = ({ car }) => {
   const navigate = useNavigate();
 
   const handleClick = (carId) => {
-    console.log(carId, "carId");
+
     try {
       navigate(`/CarDetailsPage/${carId}`);
     } catch (error) {
       console.error("Error navigating to new page:", error);
     }
   };
-
+ const backendUrl = process.env.VITE_BACKEND_URL;
   return (
     <div className="car-card" onClick={() => handleClick(car._id)}>
       <img
-        src={`http://localhost:5000/uploads/cars/${car.image}`}
+       
+        src={`${backendUrl}/uploads/cars/${car.image}`}
         alt={car.name}
         className="car-image"
         crossOrigin="anonymous"
