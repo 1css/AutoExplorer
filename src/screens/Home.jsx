@@ -48,7 +48,7 @@ const Home = React.memo(() => {
         ),
         axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/Upprod/active`),
         axios.get(
-          `${import.meta.env.VITE_BACKEND_URL}/api/brandRouter/topBrand`
+          `${import.meta.env.VITE_BACKEND_URL}/api/topBrand`
         ),
         axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/prod/seletcars`),
       ]);
