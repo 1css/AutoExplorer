@@ -178,7 +178,7 @@ const Home = React.memo(() => {
                 <h4>Engine</h4>
               </div>
               <div className="part-card">
-                <img src="assets/parts/tyre.jpg" alt="Tyre" loading="lazy" />
+                <img src="assets/parts/Tyre.jpg" alt="Tyre" loading="lazy" />
                 <h4>Tyre 3</h4>
               </div>
               <div className="part-card">
