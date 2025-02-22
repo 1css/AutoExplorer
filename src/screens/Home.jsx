@@ -97,7 +97,12 @@ const Home = React.memo(() => {
   
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div class="loading-container">
+        <p class="loading-message">Loading...</p>
+        <p class="waiting-message">Please wait</p>
+      </div>
+    );
   }
 
   if (error) {

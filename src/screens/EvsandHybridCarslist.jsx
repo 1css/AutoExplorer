@@ -43,7 +43,10 @@ const BASE_URL = import.meta.env.VITE_BACKEND_URL;
   return (
     <div className="EnvandHybridCarsList-main-classname">
       {loading ? (
-        <p>Loading cars...</p>
+        <div class="loading-container">
+          <p class="loading-message">Loading...</p>
+          <p class="waiting-message">Please wait</p>
+        </div>
       ) : error ? (
         <p>Error: {error}</p>
       ) : (

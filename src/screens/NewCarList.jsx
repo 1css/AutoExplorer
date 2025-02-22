@@ -33,7 +33,10 @@ const CarList = () => {
       <h2 className="section-title">Explore Our New Cars</h2>
 
       {loading ? (
-        <p className="loading">Loading cars...</p>
+        <div class="loading-container">
+          <p class="loading-message">Loading...</p>
+          <p class="waiting-message">Please wait</p>
+        </div>
       ) : error ? (
         <p className="error">{error}</p>
       ) : (
