@@ -27,7 +27,7 @@ export const fetchUpcomingCars = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: FETCH_UPCOMING_CARS_FAILURE,
-      payload: error.response.data,
+      payload: error.response ? error.response.data : error.message,
     });
   }
 };
@@ -48,7 +48,7 @@ export const fetchTrendingCars = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: FETCH_TRENDING_CARS_FAILURE,
-      payload: error.response.data,
+      payload: error.response ? error.response.data : error.message,
     });
   }
 };
