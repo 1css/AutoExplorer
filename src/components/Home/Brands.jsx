@@ -4,7 +4,7 @@ import "../../styles/components/Brands.css";
 import { carBrands } from "../../Data/data";
 
 const PopularCarBrands = ({ Popular }) => {
-   const backendUrl = process.env.VITE_BACKEND_URL;
+   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   if (!Popular || Popular.length === 0) return null; // Handle empty state
 
   const topBrand = Popular.topBrand;

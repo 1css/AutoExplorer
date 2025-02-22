@@ -12,7 +12,7 @@ function UpcomingCard({ image, title, price, rating }) {
   };
 
     const imageUrl = `${backendUrl}/uploads/upcomingcar/${image}`;
-    console.log("Generated Image URL:", imageUrl);
+   
   return (
     <Card className="popular-card">
       <Card.Img

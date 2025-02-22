@@ -226,7 +226,7 @@ const CarDetailsPage = () => {
     };
   };
 
-   const backendUrl = process.env.VITE_BACKEND_URL;
+   const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   return (
     <div className="container car-details-page mt-4">

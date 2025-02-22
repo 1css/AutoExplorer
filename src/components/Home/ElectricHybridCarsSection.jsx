@@ -4,7 +4,7 @@ import "../../styles/components/ElectricHybridCarsSection.css";
 import { useNavigate } from "react-router-dom";
 
 const ElectricHybridCarsSection = ({ evhybridhome }) => {
- const backendUrl = process.env.VITE_BACKEND_URL;
+ const backendUrl = import.meta.env.VITE_BACKEND_URL;
  
   const handleImageError = (e) => {
     e.target.src = "/default-image.png";

@@ -13,7 +13,7 @@ const CarCard = ({ car }) => {
       console.error("Error navigating to new page:", error);
     }
   };
- const backendUrl = process.env.VITE_BACKEND_URL;
+ const backendUrl = import.meta.env.VITE_BACKEND_URL;
   return (
     <div className="car-card" onClick={() => handleClick(car._id)}>
       <img

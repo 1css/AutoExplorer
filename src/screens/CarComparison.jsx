@@ -135,7 +135,7 @@ const CarComparison = () => {
   };
 
 
- const backendUrl = process.env.VITE_BACKEND_URL;
+ const backendUrl = import.meta.env.VITE_BACKEND_URL;
   return (
     <div className="car-comparison-container">
       <h2 style={{ fontSize: 28, color: "#333", marginBottom: 20 }}>
