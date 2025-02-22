@@ -10,6 +10,9 @@ function UpcomingCard({ image, title, price, rating }) {
   const handleImageError = (e) => {
     e.target.src = "/default-image.png";
   };
+
+    const imageUrl = `${backendUrl}/uploads/upcomingcar/${image}`;
+    console.log("Generated Image URL:", imageUrl);
   return (
     <Card className="popular-card">
       <Card.Img
