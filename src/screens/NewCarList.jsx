@@ -9,6 +9,7 @@ const CarList = () => {
   const [error, setError] = useState(null);
 
   const fetchCars = async () => {
+    const BASE_URL = import.meta.env.VITE_BACKEND_URL;
     setLoading(true);
     setError(null);
     try {
