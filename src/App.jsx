@@ -59,30 +59,17 @@ const ScrollToTopButton = () => {
 };
 
 const routes = [
-  { path: "/", element: <Home />, lazyLoad: false },
-  {
-    path: "/CarDetailsPage/:carId",
-    element: <CarDetailsPage />,
-    lazyLoad: true,
-  },
-  { path: "/CarComparison", element: <CarComparison />, lazyLoad: true },
-  { path: "/CarList", element: <CarList />, lazyLoad: true },
-  { path: "/AllCarList", element: <AllCarList />, lazyLoad: true },
-  { path: "/Login", element: <Login />, lazyLoad: false },
-  { path: "/SignUp", element: <SignUp />, lazyLoad: false },
-  { path: "/FavoritesPage", element: <CartPage />, lazyLoad: true },
-  { path: "/ProfilePage", element: <ProfilePage />, lazyLoad: true },
-  // { path: "/CarsPageSearched", element: <CarsPageSearched />, lazyLoad: true },
-  {
-    path: "/CarsPageSearched",
-    element: <CarsPagesearched2 />,
-    lazyLoad: true,
-  },
-  {
-    path: "/EnvandHybridCarsList",
-    element: <EnvandHybridCarsList />,
-    lazyLoad: true,
-  },
+  { path: "/", element: <Home /> },
+  { path: "/CarDetailsPage/:carId", element: <CarDetailsPage /> },
+  { path: "/CarComparison", element: <CarComparison /> },
+  { path: "/CarList", element: <CarList /> },
+  { path: "/AllCarList", element: <AllCarList /> },
+  { path: "/Login", element: <Login /> },
+  { path: "/SignUp", element: <SignUp /> },
+  { path: "/FavoritesPage", element: <CartPage /> },
+  { path: "/ProfilePage", element: <ProfilePage /> },
+  { path: "/CarsPageSearched", element: <CarsPagesearched2 /> },
+  { path: "/EnvandHybridCarsList", element: <EnvandHybridCarsList /> },
 ];
 
 function App() {
@@ -90,21 +77,13 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-        <Routes>
-          {routes.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              element={
-                route.lazyLoad ? (
-                  <LazyLoad offset={100}>{route.element}</LazyLoad>
-                ) : (
-                  route.element
-                )
-              }
-            />
-          ))}
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            {routes.map((route, index) => (
+              <Route key={index} path={route.path} element={route.element} />
+            ))}
+          </Routes>
+        </Suspense>
         <Footer />
       </BrowserRouter>
       <ScrollToTopButton />
