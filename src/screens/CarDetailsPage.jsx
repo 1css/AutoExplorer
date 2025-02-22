@@ -76,9 +76,13 @@ const CarDetailsPage = () => {
 
   const [needi, setNeedi] = useState(carId);
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [rating, setRating] = useState(0);
+  const [comment, setComment] = useState("");
+  const [showModal, setShowModal] = useState(false);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -164,9 +168,7 @@ const CarDetailsPage = () => {
     setSelectedDate("");
   }, []);
 
-  const [selectedDate, setSelectedDate] = useState(new Date());
 
-  const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => {
     setShowModal((prev) => !prev);
@@ -181,9 +183,7 @@ const CarDetailsPage = () => {
     });
   };
 
-  const TestDriveBooking = () => {
-    const [selectedDate, setSelectedDate] = useState(null);
-  };
+
 
   const handleImageError = (e) => {
     e.target.src = "/default-image.png";
@@ -191,8 +191,7 @@ const CarDetailsPage = () => {
 
   // review
 
-  const [rating, setRating] = useState(0);
-  const [comment, setComment] = useState("");
+
   const dispatch = useDispatch();
   const { isAuthenticated, userInfo } = useSelector((state) => state.user);
   const { cartDone } = useSelector((state) => state.cart);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, memo, useMemo } from "react";
+import React, { useEffect, useState, memo, useMemo, useCallback } from "react";
 import "../styles/screens/Home.css";
 import FeaturedCom from "../components/Home/FeaturedCom";
 import PopularCarBrands from "../components/Home/Brands";
@@ -23,13 +23,6 @@ const Home = React.memo(() => {
   const upcomingcars = useSelector((state) => state.upcomingcars);
   const { upcom, loading } = upcomingcars || {};
 
-  useEffect(() => {
-    if (!upcom || upcom.length === 0) {
-      dispatch(fetchUpcomingCars());
-      dispatch(fetchTrendingCars());
-    }
-  }, [dispatch, upcom]);
-
   const [evhybridhome, setEvhybridhome] = useState([]);
   const [Popular, setPopular] = useState([]);
   const [error, setError] = useState(null);
@@ -37,7 +30,7 @@ const Home = React.memo(() => {
   const [cars, setCars] = useState([]);
   const [hasFetched, setHasFetched] = useState(false); // New state to track if fetched has been called
 
-  const fetched = async () => {
+  const fetched = useCallback(async () => {
     if (hasFetched) return; // Prevent multiple fetches
 
     setIsLoading(true);
@@ -47,9 +40,7 @@ const Home = React.memo(() => {
           `${import.meta.env.VITE_BACKEND_URL}/api/prod/electric-hybrid-home`
         ),
         axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/Upprod/active`),
-        axios.get(
-          `${import.meta.env.VITE_BACKEND_URL}/api/topBrand`
-        ),
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/topBrand`),
         axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/prod/seletcars`),
       ]);
 
@@ -62,7 +53,6 @@ const Home = React.memo(() => {
 
       setEvhybridhome(responses[0].data);
       setPopular(responses[2].data);
-      console.log(responses[3].data, "fourthResponse.data");
       setCars(responses[3].data);
       setHasFetched(true); // Mark as fetched
     } catch (error) {
@@ -71,33 +61,29 @@ const Home = React.memo(() => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [
+    hasFetched,
+    setHasFetched,
+    setIsLoading,
+    setEvhybridhome,
+    setPopular,
+    setCars,
+  ]);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!upcom || upcom.length === 0) {
+      dispatch(fetchUpcomingCars());
+      dispatch(fetchTrendingCars());
+    }
+  }, [dispatch, upcom]);
 
   useEffect(() => {
     if (!hasFetched) {
       fetched();
     }
-  }, [hasFetched]);
-
-  console.log("Home component rendered");
-
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
-
-   useEffect(() => {
-     // Reset error state when the component mounts or when the user navigates away
-     return () => {
-       setError(null);
-     };
-   }, []);
-   
-  if (error) {
-    console.log(error, "errorjjj");
-    return <p className="text-center my-5">Please come back later</p>;
-  }
+  }, [hasFetched, fetched]);
 
   useEffect(() => {
     // Reset error state when the component mounts or when the user navigates away
@@ -105,7 +91,22 @@ const Home = React.memo(() => {
       setError(null);
     };
   }, []);
+
+  console.log(Popular, "Popular");
+  console.log(evhybridhome, "evhybridhome");
   
+  
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    console.log(error, "errorjjj");
+    return <p className="text-center my-5">Please come back later</p>;
+  }
+
+  console.log("Home component rendered");
 
   return (
     <>

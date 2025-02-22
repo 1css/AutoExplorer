@@ -29,7 +29,7 @@ function Upcoming() {
         }}
         height={400}
       >
-        {upcom.map((item, index) => (
+        {upcom?.map((item, index) => (
           <SwiperSlide key={index}>
             <UpcomingCard
               image={item.image}

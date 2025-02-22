@@ -32,8 +32,8 @@ if (import.meta.env.VITE_NODE_ENV !== "production") {
 }
 
 // Conditional service worker registration in production
-if (import.meta.env.VITE_NODE_ENV === "production") {
-  import("./components/common/registerServiceWorker").then((module) => {
-    module.registerServiceWorker();
-  });
-}
+// if (import.meta.env.VITE_NODE_ENV === "production") {
+//   import("./components/common/registerServiceWorker").then((module) => {
+//     module.registerServiceWorker();
+//   });
+// }

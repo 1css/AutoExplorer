@@ -9,9 +9,12 @@ import TrendingCard from "./TrendingCard";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
-function Trending() {
+function Trending({}) {
   const trendingcars = useSelector((state) => state.trendingcars);
   const { trending, loading } = trendingcars || {};
+
+  console.log(trending, "trending");
+  
   return (
     <div>
       <p className="text-center my-3 tabs-title">Trending Cars</p>

@@ -9,8 +9,10 @@ import {
 } from "../Constants/FeaturedContstant";
 
 const instance = axios.create({
-  baseURL: `${import.meta.env.VITE_BACKEND_URL}/api`,
+  baseURL: `${import.meta.env.VITE_BACKEND_URL}api`,
 });
+
+console.log(instance.defaults.baseURL,'url xios');
 
 export const fetchUpcomingCars = () => async (dispatch) => {
   dispatch({
@@ -40,6 +42,9 @@ export const fetchTrendingCars = () => async (dispatch) => {
       type: FETCH_TRENDING_CARS_SUCCESS,
       payload: response.data,
     });
+
+    console.log(response.data, "response");
+    
   } catch (error) {
     dispatch({
       type: FETCH_TRENDING_CARS_FAILURE,
