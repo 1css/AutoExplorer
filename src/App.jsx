@@ -76,6 +76,7 @@ const routes = [
 function App() {
    const [searchTerm, setSearchTerm] = React.useState("");
    const handleSearch = (e) => setSearchTerm(e.target.value);
+   const navigate = useNavigate();
    const handleSearch2 = () => {
      if (searchTerm !== "") {
        navigate(`/CarsPageSearched?s=${searchTerm}`);
@@ -84,7 +85,7 @@ function App() {
        window.alert("Please enter the search product text");
      }
    };
-   const navigate = useNavigate();
+   
   return (
     <div>
       <BrowserRouter>
