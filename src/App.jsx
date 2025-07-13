@@ -74,6 +74,16 @@ const routes = [
 ];
 
 function App() {
+   const [searchTerm, setSearchTerm] = React.useState("");
+   const handleSearch = (e) => setSearchTerm(e.target.value);
+   const handleSearch2 = () => {
+     if (searchTerm !== "") {
+       navigate(`/CarsPageSearched?s=${searchTerm}`);
+       setSearchTerm("");
+     } else {
+       window.alert("Please enter the search product text");
+     }
+   };
   return (
     <div>
       <BrowserRouter>
@@ -84,13 +94,13 @@ function App() {
             className="form-control me-sm-2"
             type="search"
             placeholder="Search"
-            // value={searchTerm}
-            // onChange={handleSearch}
+            value={searchTerm}
+            onChange={handleSearch}
           />
           <button
             className="btn btn-secondary"
             type="button"
-            // onClick={handleSearch2}
+            onClick={handleSearch2}
           >
             Search
           </button>

@@ -20,6 +20,10 @@ const ElectricHybridCarsSection = ({ evhybridhome }) => {
     }
   };
 
+  const handleClick2 = () => {
+    navigate("/electric-hybrid-cars");
+  };
+
   return (
     <div className="electric-hybrid-cars-section py-5 mt-2">
       <h2 className="text-center mb-4 text-primary">Electric & Hybrid Cars</h2>
@@ -32,7 +36,6 @@ const ElectricHybridCarsSection = ({ evhybridhome }) => {
             >
               <Card.Img
                 variant="top"
-               
                 src={`${backendUrl}/uploads/cars/${car.image}`}
                 onError={handleImageError}
                 crossOrigin="anonymous"
@@ -51,7 +54,10 @@ const ElectricHybridCarsSection = ({ evhybridhome }) => {
         ))}
       </Row>
       <div className="text-center mt-4">
-        <Button className="btn-lg rounded-pill cutom-btn-ele">
+        <Button
+          className="btn-lg rounded-pill cutom-btn-ele"
+          onClick={handleClick2}
+        >
           View All Electric & Hybrid Cars
         </Button>
       </div>
