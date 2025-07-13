@@ -8,7 +8,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Header from "./components/common/Header";
 import Header2 from './components/common/Header2'
 import Footer from "./components/common/Footer";
-
+import { NavLink, Link, useNavigate } from "react-router-dom";
 // Lazy Load Screens
 const Home = lazy(() => import("./screens/Home"));
 const CarDetailsPage = lazy(() => import("./screens/CarDetailsPage"));
@@ -84,6 +84,7 @@ function App() {
        window.alert("Please enter the search product text");
      }
    };
+   const navigate = useNavigate();
   return (
     <div>
       <BrowserRouter>
@@ -93,7 +94,7 @@ function App() {
           <input
             className="form-control me-sm-2"
             type="search"
-            placeholder="Search"
+            placeholder="Search..."
             value={searchTerm}
             onChange={handleSearch}
           />
