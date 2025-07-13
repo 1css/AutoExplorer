@@ -6,6 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // Importing Header & Footer
 import Header from "./components/common/Header";
+import Header2 from './components/common/Header2'
 import Footer from "./components/common/Footer";
 
 // Lazy Load Screens
@@ -76,7 +77,24 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header />
+        {/* <Header /> */}
+        <Header2 />
+        <form className="d-lg-none d-flex p-1 me-2">
+          <input
+            className="form-control me-sm-2"
+            type="search"
+            placeholder="Search"
+            // value={searchTerm}
+            // onChange={handleSearch}
+          />
+          <button
+            className="btn btn-secondary"
+            type="button"
+            // onClick={handleSearch2}
+          >
+            Search
+          </button>
+        </form>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             {routes.map((route, index) => (
