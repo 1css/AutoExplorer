@@ -7,7 +7,7 @@ import "./index.css";
 import App from "./App.jsx";
 import store from "./store";
 import { Provider } from "react-redux";
-
+import { BrowserRouter } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorPage from "./components/common/ErrorPage.jsx";
 
@@ -21,7 +21,9 @@ const root = ReactDOMClient.createRoot(document.getElementById("root"));
 root.render(
   <ErrorBoundary FallbackComponent={ErrorPage}>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   </ErrorBoundary>
 );

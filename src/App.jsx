@@ -8,7 +8,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Header from "./components/common/Header";
 import Header2 from './components/common/Header2'
 import Footer from "./components/common/Footer";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 // Lazy Load Screens
 const Home = lazy(() => import("./screens/Home"));
 const CarDetailsPage = lazy(() => import("./screens/CarDetailsPage"));
@@ -74,35 +74,35 @@ const routes = [
 ];
 
 function App() {
-  //  const [searchTerm, setSearchTerm] = React.useState("");
-  //  const handleSearch = (e) => setSearchTerm(e.target.value);
-  //  const navigate = useNavigate();
-  //  const handleSearch2 = () => {
-  //    if (searchTerm !== "") {
-  //      navigate(`/CarsPageSearched?s=${searchTerm}`);
-  //      setSearchTerm("");
-  //    } else {
-  //      window.alert("Please enter the search product text");
-  //    }
-  //  };
+   const [searchTerm, setSearchTerm] = React.useState("");
+   const handleSearch = (e) => setSearchTerm(e.target.value);
+   const navigate = useNavigate();
+   const handleSearch2 = () => {
+     if (searchTerm !== "") {
+       navigate(`/CarsPageSearched?s=${searchTerm}`);
+       setSearchTerm("");
+     } else {
+       window.alert("Please enter the search product text");
+     }
+   };
    
   return (
     <div>
-      <BrowserRouter>
+      <>
         {/* <Header /> */}
         <Header2 />
         <form className="d-lg-none d-flex p-1 me-2">
           <input
             className="form-control me-sm-2"
-            type="search.."
+            type="search"
             placeholder="Search..."
-            // value={searchTerm}
-            // onChange={handleSearch}
+            value={searchTerm}
+            onChange={handleSearch}
           />
           <button
             className="btn btn-secondary"
             type="button"
-            // onClick={handleSearch2}
+            onClick={handleSearch2}
           >
             Search
           </button>
