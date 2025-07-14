@@ -21,7 +21,7 @@ const ElectricHybridCarsSection = ({ evhybridhome }) => {
   };
 
   const handleClick2 = () => {
-    navigate("/electric-hybrid-cars");
+    navigate("/EnvandHybridCarsList");
   };
 
   return (

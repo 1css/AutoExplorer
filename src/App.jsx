@@ -91,7 +91,7 @@ function App() {
       <>
         {/* <Header /> */}
         <Header2 />
-        <form className="d-lg-none d-flex p-1 me-2">
+        <form className="d-lg-none d-flex p-2 me-2">
           <input
             className="form-control me-sm-2"
             type="search"
