@@ -125,7 +125,6 @@ const CarComparison = () => {
     } else if (typeof value === "object") {
       return value ? "Yes2" : "No2";
     } else {
-   
       return value;
     }
   };
@@ -134,46 +133,30 @@ const CarComparison = () => {
     e.target.src = "/default-image.png";
   };
 
-
- const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   return (
     <div className="car-comparison-container">
-      <h2 style={{ fontSize: 28, color: "#333", marginBottom: 20 }}>
+      <h2 className="text-2xl font-semibold text-gray-800 mb-6">
         Car Comparison
       </h2>
-      <div
-        className="car-table"
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-        <table style={{ width: "100%", borderCollapse: "collapse" }}>
-          <thead style={{ backgroundColor: "#f2f2f2" }}>
+
+      <div className="overflow-x-auto lg:overflow-x-visible shadow-md rounded-lg">
+        <table className="min-w-full bg-white border border-gray-200">
+          <thead className="bg-gray-50">
             <tr>
-              <th
-                style={{
-                  padding: 10,
-                  textAlign: "left",
-                  border: "1px solid #ddd",
-                  fontWeight: "bold",
-                }}
-              >
+              <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 sticky left-0 bg-gray-50 z-10 border-r border-gray-200">
                 Features
               </th>
               {carDetails.map((car, index) => (
                 <th
                   key={index}
-                  style={{
-                    padding: 10,
-                    textAlign: "center",
-                    border: "1px solid #ddd",
-                    fontWeight: "bold",
-                  }}
+                  className="px-4 py-3 text-center text-sm font-semibold text-gray-700 min-w-48 border-l border-gray-200"
                 >
-                  <h3 style={{ fontSize: 18, marginBottom: 10 }}>{car.name}</h3>
+                  <h3 className="font-medium text-gray-900">{car.name}</h3>
                   <img
-                 
                     src={`${backendUrl}/uploads/cars/${car.images[0]}`}
                     alt={car.name}
-                    style={{ width: 100, height: 100, objectFit: "cover" }}
+                    className="w-20 h-20 object-cover rounded mx-auto mt-2"
                     onError={handleImageError}
                     crossOrigin="anonymous"
                   />
@@ -183,24 +166,17 @@ const CarComparison = () => {
           </thead>
           <tbody>
             {keys.map((key) => (
-              <tr key={key}>
-                <td
-                  style={{
-                    padding: 10,
-                    textAlign: "left",
-                    border: "1px solid #ddd",
-                  }}
-                >
+              <tr
+                key={key}
+                className="even:bg-gray-25 hover:bg-blue-25 transition-colors"
+              >
+                <td className="px-4 py-3 text-sm font-medium text-gray-900 sticky left-0 bg-white z-10 border-r border-gray-200">
                   {key}
                 </td>
                 {carDetails.map((car) => (
                   <td
                     key={car._id}
-                    style={{
-                      padding: 10,
-                      textAlign: "center",
-                      border: "1px solid #ddd",
-                    }}
+                    className="px-4 py-3 text-sm text-gray-700 text-center border-l border-gray-200"
                   >
                     {handleDisplayValue(handleNestedFields(car, key))}
                   </td>
