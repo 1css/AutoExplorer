@@ -162,7 +162,7 @@ const CarsPagesearched2 = () => {
       {/* Error State */}
       {error && <p>{error}</p>}
 
-      {/* Cars Display Section */}
+
       {/* Cars Display Section */}
       {!loading && filteredCars.length > 0 && (
         <div className="row mt-4">
