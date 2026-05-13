@@ -4,14 +4,17 @@
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* important */
 }
 
 .car-table {
-  margin-top: 20px;
+  width: 100%;
+  overflow-x: auto; /* important */
 }
 
 .car-table table {
   width: 100%;
+  min-width: 700px; /* important for mobile scroll */
   border-collapse: collapse;
 }
 
@@ -34,6 +37,29 @@
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .car-comparison-container {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .car-table th,
+  .car-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .car-table img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .car-table h3 {
+    font-size: 14px;
+  }
 }
 
 /* .car-comparison-container {
